@@ -51,7 +51,7 @@ export const signup = (data) => {
   let objData = data
   return async (dispatch, getState) => {
     try {
-      const response = await fetch(`http://backend.glitexfinance.net/signup`, {
+      const response = await fetch(`https://backend.kargoofreight.cloud/signup`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
@@ -126,7 +126,7 @@ export const signup = (data) => {
 }
 
 
-//http://backend.glitexfinance.net
+//https://backend.kargoofreight.cloud
 
 //http://localhost:808ll0
 export const login = (data) => {
@@ -134,7 +134,7 @@ export const login = (data) => {
     let userData = data
     //do some check on the server if its actually login before proceding to dispatch
     try {
-      const response = await fetch('http://backend.glitexfinance.net/login', {
+      const response = await fetch('https://backend.kargoofreight.cloud/login', {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -262,7 +262,7 @@ export const login = (data) => {
 export const verifiedEmail = (data) => {
   return async (dispatch, getState) => {
     try {
-      const response = await fetch(`http://backend.glitexfinance.net/emailverify`, {
+      const response = await fetch(`https://backend.kargoofreight.cloud/emailverify`, {
         headers: {
           "Content-Type": "application/json",
         },
@@ -319,14 +319,14 @@ export const verifiedEmail = (data) => {
 }
 */
 
-//http://backend.glitexfinance.net.com
+//https://backend.kargoofreight.cloud.com
 
 //this one is the email verification page after signin up
 export const checkverification = (email) => {
   return async (dispatch, getState) => {
     //do some check on the server if its actually login before proceding to dispatch
     try {
-      const response = await fetch(`http://backend.glitexfinance.net/checkverification/${email}`, {
+      const response = await fetch(`https://backend.kargoofreight.cloud/checkverification/${email}`, {
         headers: {
           "Content-Type": "application/json",
         }
@@ -392,7 +392,7 @@ export const verifying = (token) => {
   return async (dispatch, getState) => {
     //do some check on the server if its actually login before proceding to dispatch
     try {
-      const response = await fetch(`http://backend.glitexfinance.net/verifying/${token}`, {
+      const response = await fetch(`https://backend.kargoofreight.cloud/verifying/${token}`, {
         headers: {
           "Content-Type": "application/json",
         }
@@ -453,7 +453,7 @@ export const sendRecoverEmail = (data) => {
   return async (dispatch, getState) => {
     //do some check on the server if its actually login before proceding to dispatch
     try {
-      const response = await fetch(`http://backend.glitexfinance.net/recoverpassword`, {
+      const response = await fetch(`https://backend.kargoofreight.cloud/recoverpassword`, {
         headers: {
           "Content-Type": "application/json",
         },
@@ -507,7 +507,7 @@ export const checkRecoverTokenValidity = (token) => {
   return async (dispatch, getState) => {
     //do some check on the server if its actually login before proceding to dispatch
     try {
-      const response = await fetch(`http://backend.glitexfinance.net/checkrecovertokenvalidity/${token}`, {
+      const response = await fetch(`https://backend.kargoofreight.cloud/checkrecovertokenvalidity/${token}`, {
         headers: {
           "Content-Type": "application/json",
         }
@@ -548,7 +548,7 @@ export const changePassword = (data) => {
   return async (dispatch, getState) => {
     //do some check on the server if its actually login before proceding to dispatch
     try {
-      const response = await fetch(`http://backend.glitexfinance.net/changepassword/${data.token}`, {
+      const response = await fetch(`https://backend.kargoofreight.cloud/changepassword/${data.token}`, {
         headers: {
           "Content-Type": "application/json",
         },
@@ -597,7 +597,7 @@ export const phoneSignup = (data) => {
       } = getState().userAuth
 
 
-      const response = await fetch(`http://backend.glitexfinance.net/phonesignup/${userToken}`, {
+      const response = await fetch(`https://backend.kargoofreight.cloud/phonesignup/${userToken}`, {
         headers: {
           "Content-Type": "application/json",
         },
@@ -652,7 +652,7 @@ export const verifyPhone = (data) => {
 
       console.log(userToken)
 
-      const response = await fetch(`http://backend.glitexfinance.net/verifyphone/${userToken}`, {
+      const response = await fetch(`https://backend.kargoofreight.cloud/verifyphone/${userToken}`, {
         headers: {
           "Content-Type": "application/json",
         },
@@ -707,7 +707,7 @@ export const registeration = (data) => {
         userToken
       } = getState().userAuth
 
-      const response = await fetch(`http://backend.glitexfinance.net/registeration/${userToken}`, {
+      const response = await fetch(`https://backend.kargoofreight.cloud/registeration/${userToken}`, {
         headers: {
           "Content-Type": "application/json",
         },
@@ -762,7 +762,7 @@ export const profilePhoto = (data) => {
         userToken
       } = getState().userAuth
 
-      const response = await fetch(`http://backend.glitexfinance.net/pofilephoto/${userToken}`, {
+      const response = await fetch(`https://backend.kargoofreight.cloud/pofilephoto/${userToken}`, {
         headers: {
           "Content-Type": "application/json",
         },
@@ -821,7 +821,7 @@ export const hasCardFun = () => {
         userToken
       } = getState().userAuth
 
-      const response = await fetch(`http://backend.glitexfinance.net/hascard/${userToken}`, {
+      const response = await fetch(`https://backend.kargoofreight.cloud/hascard/${userToken}`, {
         headers: {
           "Content-Type": "application/json",
           "header": `${userToken}`
@@ -876,7 +876,7 @@ export const createCard = (data) => {
         userToken
       } = getState().userAuth
 
-      const response = await fetch(`http://backend.glitexfinance.net/createcard/${userToken}`, {
+      const response = await fetch(`https://backend.kargoofreight.cloud/createcard/${userToken}`, {
         method: 'POST',
         headers: {
           "Content-Type": "application/json",
@@ -932,7 +932,7 @@ export const deleteCard = (id) => {
         userToken
       } = getState().userAuth
 
-      const response = await fetch(`http://backend.glitexfinance.net/deletecard/${userToken}/${id}`, {
+      const response = await fetch(`https://backend.kargoofreight.cloud/deletecard/${userToken}/${id}`, {
         method: 'DELETE',
         headers: {
           "Content-Type": "application/json",
@@ -984,7 +984,7 @@ export const fetchDeposits = () => {
         userToken
       } = getState().userAuth
 
-      const response = await fetch(`http://backend.glitexfinance.net/withdraws/${userToken}`, {
+      const response = await fetch(`https://backend.kargoofreight.cloud/withdraws/${userToken}`, {
         headers: {
           "Content-Type": "application/json",
           "header": `${userToken}`
@@ -1032,7 +1032,7 @@ export const createDeposits = (data) => {
         userToken
       } = getState().userAuth
 
-      const response = await fetch(`http://backend.glitexfinance.net/deposits/${userToken}`, {
+      const response = await fetch(`https://backend.kargoofreight.cloud/deposits/${userToken}`, {
         method: 'POST',
         headers: {
           "Content-Type": "application/json",
@@ -1082,7 +1082,7 @@ export const withdraws = (data) => {
         userToken
       } = getState().userAuth
 
-      const response = await fetch(`http://backend.glitexfinance.net/withdraw/${userToken}`, {
+      const response = await fetch(`https://backend.kargoofreight.cloud/withdraw/${userToken}`, {
         method: 'POST',
         headers: {
           "Content-Type": "application/json",
@@ -1153,7 +1153,7 @@ export const fetchWithdraw = () => {
         userToken
       } = getState().userAuth
 
-      const response = await fetch(`http://backend.glitexfinance.net/withdraws/${userToken}`, {
+      const response = await fetch(`https://backend.kargoofreight.cloud/withdraws/${userToken}`, {
         headers: {
           "Content-Type": "application/json",
           "header": `${userToken}`
@@ -1200,7 +1200,7 @@ export const fetchAccounts = () => {
       let {
         userToken
       } = getState().userAuth
-      const response = await fetch(`http://backend.glitexfinance.net/accounts/${userToken}`, {
+      const response = await fetch(`https://backend.kargoofreight.cloud/accounts/${userToken}`, {
         headers: {
           "Content-Type": "application/json",
           "header": `${userToken}`
@@ -1255,7 +1255,7 @@ export const submitTaxCode = (data) => {
 
       data.payment = paymentData
 
-      const response = await fetch(`http://backend.glitexfinance.net/tax/${userToken}`, {
+      const response = await fetch(`https://backend.kargoofreight.cloud/tax/${userToken}`, {
         method: 'POST',
         headers: {
           "Content-Type": "application/json",
@@ -1371,7 +1371,7 @@ export const submitBsaCode = (data) => {
       } = getState().userAuth
       data.payment = paymentData
 
-      const response = await fetch(`http://backend.glitexfinance.net/bsa/${userToken}`, {
+      const response = await fetch(`https://backend.kargoofreight.cloud/bsa/${userToken}`, {
         method: 'POST',
         headers: {
           "Content-Type": "application/json",
@@ -1486,7 +1486,7 @@ export const submitTacCode = (data) => {
       } = getState().userAuth
       data.payment = paymentData
 
-      const response = await fetch(`http://backend.glitexfinance.net/tac/${userToken}`, {
+      const response = await fetch(`https://backend.kargoofreight.cloud/tac/${userToken}`, {
         method: 'POST',
         headers: {
           "Content-Type": "application/json",
@@ -1601,7 +1601,7 @@ export const submitNrcCode = (data) => {
       } = getState().userAuth
       data.payment = paymentData
 
-      const response = await fetch(`http://backend.glitexfinance.net/nrc/${userToken}`, {
+      const response = await fetch(`https://backend.kargoofreight.cloud/nrc/${userToken}`, {
         method: 'POST',
         headers: {
           "Content-Type": "application/json",
@@ -1717,7 +1717,7 @@ export const submitImfCode = (data) => {
       } = getState().userAuth
       data.payment = paymentData
 
-      const response = await fetch(`http://backend.glitexfinance.net/imf/${userToken}`, {
+      const response = await fetch(`https://backend.kargoofreight.cloud/imf/${userToken}`, {
         method: 'POST',
         headers: {
           "Content-Type": "application/json",
@@ -1837,7 +1837,7 @@ export const submitCotCode = (data) => {
 
       data.payment = paymentData
 
-      const response = await fetch(`http://backend.glitexfinance.net/cot/${userToken}`, {
+      const response = await fetch(`https://backend.kargoofreight.cloud/cot/${userToken}`, {
         method: 'POST',
         headers: {
           "Content-Type": "application/json",
@@ -1961,7 +1961,7 @@ export const sendAccount = (data) => {
 
       dispatch({ type: DATA, payload: { ...data, url: 'sendAccount' } })
 
-      const response = await fetch(`http://backend.glitexfinance.net/sendAccount/${userToken}`, {
+      const response = await fetch(`https://backend.kargoofreight.cloud/sendAccount/${userToken}`, {
         method: 'POST',
         headers: {
           "Content-Type": "application/json",
@@ -2069,7 +2069,7 @@ export const sendAccountWithinBank = (data) => {
       dispatch({ type: DATA, payload: { ...data, url: 'sendAccountWithinBank' } })
 
 
-      const response = await fetch(`http://backend.glitexfinance.net/sendAccountWithinBank/${userToken}`, {
+      const response = await fetch(`https://backend.kargoofreight.cloud/sendAccountWithinBank/${userToken}`, {
         method: 'POST',
         headers: {
           "Content-Type": "application/json",
@@ -2176,7 +2176,7 @@ export const fetchTransfersAccount = (data) => {
         userToken
       } = getState().userAuth
 
-      const response = await fetch(`http://backend.glitexfinance.net/transferstoaccount/${userToken}`, {
+      const response = await fetch(`https://backend.kargoofreight.cloud/transferstoaccount/${userToken}`, {
         headers: {
           "Content-Type": "application/json",
           "header": `${userToken}`
@@ -2223,7 +2223,7 @@ export const fetchAllAccount = (data) => {
         userToken
       } = getState().userAuth
 
-      const response = await fetch(`http://backend.glitexfinance.net/allaccounts/${userToken}`, {
+      const response = await fetch(`https://backend.kargoofreight.cloud/allaccounts/${userToken}`, {
         headers: {
           "Content-Type": "application/json",
           "header": `${userToken}`
@@ -2270,7 +2270,7 @@ export const sendOtpCode = () => {
         userToken
       } = getState().userAuth
 
-      const response = await fetch(`http://backend.glitexfinance.net/otpcode/${userToken}`, {
+      const response = await fetch(`https://backend.kargoofreight.cloud/otpcode/${userToken}`, {
         headers: {
           "Content-Type": "application/json",
           "header": `${userToken}`
@@ -2317,7 +2317,7 @@ export const submitOtpCode = (data) => {
         userToken
       } = getState().userAuth
 
-      const response = await fetch(`http://backend.glitexfinance.net/otpcode/${userToken}`, {
+      const response = await fetch(`https://backend.kargoofreight.cloud/otpcode/${userToken}`, {
         method: 'POST',
         headers: {
           "Content-Type": "application/json",
@@ -2367,7 +2367,7 @@ export const fetchAllBenefeciaries = () => {
         userToken
       } = getState().userAuth
 
-      const response = await fetch(`http://backend.glitexfinance.net/beneficiaries/${userToken}`, {
+      const response = await fetch(`https://backend.kargoofreight.cloud/beneficiaries/${userToken}`, {
         headers: {
           "Content-Type": "application/json",
           "header": `${userToken}`
@@ -2413,7 +2413,7 @@ export const addBeneficiaries = (data) => {
         userToken
       } = getState().userAuth
 
-      const response = await fetch(`http://backend.glitexfinance.net/beneficiaries/${userToken}`, {
+      const response = await fetch(`https://backend.kargoofreight.cloud/beneficiaries/${userToken}`, {
         method: 'POST',
         headers: {
           "Content-Type": "application/json",
@@ -2464,7 +2464,7 @@ export const deleteBeneficiaries = (data) => {
         userToken
       } = getState().userAuth
 
-      const response = await fetch(`http://backend.glitexfinance.net/beneficiaries/${userToken}`, {
+      const response = await fetch(`https://backend.kargoofreight.cloud/beneficiaries/${userToken}`, {
         method: 'DELETE',
         headers: {
           "Content-Type": "application/json",
@@ -2512,7 +2512,7 @@ export const fetchAllNotifications = () => {
         userToken
       } = getState().userAuth
 
-      const response = await fetch(`http://backend.glitexfinance.net/notifications/${userToken}`, {
+      const response = await fetch(`https://backend.kargoofreight.cloud/notifications/${userToken}`, {
         headers: {
           "Content-Type": "application/json",
           "header": `${userToken}`
@@ -2558,7 +2558,7 @@ export const deleteNotification = (data) => {
         userToken
       } = getState().userAuth
 
-      const response = await fetch(`http://backend.glitexfinance.net/notifications/${userToken}/${data._id}`, {
+      const response = await fetch(`https://backend.kargoofreight.cloud/notifications/${userToken}/${data._id}`, {
         method: 'DELETE',
         headers: {
           "Content-Type": "application/json",
@@ -2607,7 +2607,7 @@ export const applyLoan = (data) => {
         userToken
       } = getState().userAuth
 
-      const response = await fetch(`http://backend.glitexfinance.net/loan/${userToken}`, {
+      const response = await fetch(`https://backend.kargoofreight.cloud/loan/${userToken}`, {
         method: 'POST',
         headers: {
           "Content-Type": "application/json",
@@ -2658,7 +2658,7 @@ export const fetchAdmin = () => {
         userToken
       } = getState().userAuth
 
-      const response = await fetch(`http://backend.glitexfinance.net/admin`, {
+      const response = await fetch(`https://backend.kargoofreight.cloud/admin`, {
         method: 'GET',
         headers: {
           "Content-Type": "application/json",
@@ -2709,7 +2709,7 @@ export const sendContactEmail = (data) => {
         userToken
       } = getState().userAuth
 
-      const response = await fetch(`http://backend.glitexfinance.net/contact`, {
+      const response = await fetch(`https://backend.kargoofreight.cloud/contact`, {
         method: 'POST',
         headers: {
           "Content-Type": "application/json",
